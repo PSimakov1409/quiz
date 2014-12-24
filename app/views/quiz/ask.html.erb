@@ -5,10 +5,10 @@
 			<ol>
 				<% @question.answers.each do |a| %>
 				<li>
-					<%= radio_button_tag "answer[id]", a.id %>
+					<%= radio_button_tag "answer_id", a.id %>
 					<%= a.content %>
 				</li>
-			<% end %>
+				<% end %>
 			</ol>
 			<%= submit_tag "Проверить" %>
 		<% end %>
