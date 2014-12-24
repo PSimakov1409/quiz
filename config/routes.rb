@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'quiz/signup_form'
+
+  get 'quiz/signin'
+
+  get 'quiz/signup'
+
   root 'quiz#welcome'
 
   get 'quiz/ask'
