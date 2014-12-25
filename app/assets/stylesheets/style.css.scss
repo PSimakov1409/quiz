@@ -1,6 +1,18 @@
 nav{
-	background-color: red;
-	heigth: 60px;
+	background-color: #DCDCDC;
+	height: 30px;
+	font-size: 16pt;
+	div{
+		margin: 0px auto;
+		width: 50%;
+		text-align: center;
+	}
+}
+td{
+	font-size: 14pt;
+}
+body{
+	font-size: 14pt;
 }
 table, th, td{
 	border: 1px solid blue;
