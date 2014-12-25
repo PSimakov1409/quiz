@@ -5,6 +5,6 @@
   <strong>Вопрос:</strong>
   <%= @answer.question.content %><br>
   <strong>Правильность:</strong>
-  <%= @answer.is_correct %>
-<%= link_to 'Edit', edit_answer_path(@answer) %> |
-<%= link_to 'Back', answers_path %>
+  <%= @answer.is_correct %><br>
+<%= link_to 'Изменить', edit_answer_path(@answer) %> |
+<%= link_to 'Назад', answers_path %>

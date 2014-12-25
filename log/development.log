@@ -39121,3 +39121,992 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:09:09 +0400
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 22]]
   [1m[36m (192.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-25 16:16:05 +0400
+Processing by QuizController#welcome as HTML
+  Rendered quiz/welcome.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-25 16:18:20 +0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-25 16:18:26 +0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eciDRX7pG4uYqx325MAbT4L/EjqWyF8hZKNdvUOFRgw=", "login"=>"PSimakov1409", "pass"=>"123", "commit"=>"регистрация"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."login" = 'PSimakov1409' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "login", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-12-25 12:18:26.462784"], ["login", "PSimakov1409"], ["updated_at", "2014-12-25 12:18:26.462784"]]
+  [1m[36m (255.2ms)[0m  [1mcommit transaction[0m
+  Rendered users/create.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 329ms (Views: 61.7ms | ActiveRecord: 256.7ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:18:26 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:26 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:26 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:18:26 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:18:26 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:18:26 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:26 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:26 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:26 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:26 +0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-25 16:18:33 +0400
+Processing by QuizController#welcome as HTML
+  Rendered quiz/welcome.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 104ms (Views: 102.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:18:33 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:18:33 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:18:33 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:33 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:33 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:33 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:18:33 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:33 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:33 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:18:33 +0400
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:18:34 +0400
+Processing by QuizController#ask as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/user/project/quiz/app/models/question.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    validate :content, presence :true
+                                 ^):
+  app/models/question.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/quiz_controller.rb:7:in `ask'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.5ms)
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:18:34 +0400
+Processing by QuizController#ask as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/user/project/quiz/app/models/question.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    validate :content, presence :true
+                                 ^):
+  app/models/question.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/quiz_controller.rb:7:in `ask'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-25 16:18:39 +0400
+Processing by QuizController#welcome as HTML
+  Rendered quiz/welcome.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:18:40 +0400
+Processing by QuizController#ask as HTML
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/user/project/quiz/app/models/question.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    validate :content, presence :true
+                                 ^):
+  app/models/question.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/quiz_controller.rb:7:in `ask'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.8ms)
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:18:40 +0400
+Processing by QuizController#ask as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/home/user/project/quiz/app/models/question.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+    validate :content, presence :true
+                                 ^):
+  app/models/question.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/quiz_controller.rb:7:in `ask'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (49.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (64.7ms)
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:19:21 +0400
+Processing by QuizController#ask as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT "questions"."id" FROM "questions"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+  Rendered quiz/ask.html.erb within layouts/application (12.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 84ms (Views: 73.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:22 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:22 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:22 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:22 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:22 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:22 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:22 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:22 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:22 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:22 +0400
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+Processing by QuizController#ask as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "questions"."id" FROM "questions"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+  Rendered quiz/ask.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 107ms (Views: 104.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:19:24 +0400
+Processing by QuizController#ask as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "questions"."id" FROM "questions"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+  Rendered quiz/ask.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+Processing by QuizController#ask as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "questions"."id" FROM "questions"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+  Rendered quiz/ask.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:25 +0400
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+Processing by QuizController#ask as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "questions"."id" FROM "questions"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+  Rendered quiz/ask.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 149ms (Views: 145.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+Processing by QuizController#ask as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT "questions"."id" FROM "questions"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+  Rendered quiz/ask.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:26 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:27 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:27 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:27 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:27 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:27 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:27 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:27 +0400
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:19:28 +0400
+Processing by QuizController#ask as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT "questions"."id" FROM "questions"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+  Rendered quiz/ask.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:28 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:28 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:28 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:28 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:28 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:28 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:28 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:28 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:28 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:28 +0400
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+Processing by QuizController#ask as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "questions"."id" FROM "questions"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+  Rendered quiz/ask.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 144ms (Views: 141.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+Processing by QuizController#ask as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "questions"."id" FROM "questions"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+  Rendered quiz/ask.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 61ms (Views: 58.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:19:29 +0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-25 16:19:32 +0400
+Processing by QuizController#welcome as HTML
+  Rendered quiz/welcome.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-25 16:21:26 +0400
+Processing by QuizController#welcome as HTML
+  Rendered quiz/welcome.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:26 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:26 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:26 +0400
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:26 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:26 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:26 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:26 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:26 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:26 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:26 +0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-25 16:21:27 +0400
+Processing by QuizController#welcome as HTML
+  Rendered quiz/welcome.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:21:28 +0400
+Processing by QuizController#ask as HTML
+  [1m[35m (0.2ms)[0m  SELECT "questions"."id" FROM "questions"
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = ?  [["question_id", 10]]
+  Rendered quiz/ask.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 130ms (Views: 116.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-12-25 16:21:29 +0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered questions/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/answers" for 127.0.0.1 at 2014-12-25 16:21:32 +0400
+Processing by AnswersController#index as HTML
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered answers/index.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/quiz/ask" for 127.0.0.1 at 2014-12-25 16:21:34 +0400
+Processing by QuizController#ask as HTML
+  [1m[35m (0.2ms)[0m  SELECT "questions"."id" FROM "questions"
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers"  WHERE "answers"."question_id" = ?  [["question_id", 10]]
+  Rendered quiz/ask.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-12-25 16:21:36 +0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered questions/index.html.erb within layouts/application (50.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 115ms (Views: 113.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2014-12-25 16:21:38 +0400
+Processing by QuestionsController#new as HTML
+  Rendered questions/_form.html.erb (2.8ms)
+  Rendered questions/new.html.erb within layouts/application (4.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eciDRX7pG4uYqx325MAbT4L/EjqWyF8hZKNdvUOFRgw=", "question"=>{"content"=>"Question 3"}, "commit"=>"Create Question"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "Question 3"], ["created_at", "2014-12-25 12:21:42.116421"], ["updated_at", "2014-12-25 12:21:42.116421"]]
+  [1m[36m (324.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/11
+Completed 302 Found in 329ms (ActiveRecord: 324.9ms)
+
+
+Started GET "/questions/11" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered questions/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:42 +0400
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-12-25 16:21:43 +0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered questions/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 151ms (Views: 149.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/answers" for 127.0.0.1 at 2014-12-25 16:21:44 +0400
+Processing by AnswersController#index as HTML
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered answers/index.html.erb within layouts/application (10.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/answers/new" for 127.0.0.1 at 2014-12-25 16:21:46 +0400
+Processing by AnswersController#new as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered answers/_form.html.erb (5.1ms)
+  Rendered answers/new.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 64ms (Views: 62.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2014-12-25 16:21:50 +0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eciDRX7pG4uYqx325MAbT4L/EjqWyF8hZKNdvUOFRgw=", "answer"=>{"content"=>"Answ 1", "question_id"=>"11", "is_correct"=>"1"}, "commit"=>"Create Answer"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("content", "created_at", "is_correct", "question_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Answ 1"], ["created_at", "2014-12-25 12:21:50.934151"], ["is_correct", "t"], ["question_id", 11], ["updated_at", "2014-12-25 12:21:50.934151"]]
+  [1m[35m (278.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/answers/16
+Completed 302 Found in 284ms (ActiveRecord: 279.1ms)
+
+
+Started GET "/answers/16" for 127.0.0.1 at 2014-12-25 16:21:51 +0400
+Processing by AnswersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT  "answers".* FROM "answers"  WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered answers/show.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 59ms (Views: 56.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:51 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:51 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:51 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:51 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:51 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:21:51 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:51 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:51 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:51 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:21:51 +0400
+
+
+Started GET "/answers" for 127.0.0.1 at 2014-12-25 16:21:58 +0400
+Processing by AnswersController#index as HTML
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers"
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered answers/index.html.erb within layouts/application (10.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 68ms (Views: 65.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/answers/new" for 127.0.0.1 at 2014-12-25 16:22:15 +0400
+Processing by AnswersController#new as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered answers/_form.html.erb (6.6ms)
+  Rendered answers/new.html.erb within layouts/application (7.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2014-12-25 16:22:20 +0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eciDRX7pG4uYqx325MAbT4L/EjqWyF8hZKNdvUOFRgw=", "answer"=>{"content"=>"Answ 2", "question_id"=>"11", "is_correct"=>"0"}, "commit"=>"Create Answer"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("content", "created_at", "question_id", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Answ 2"], ["created_at", "2014-12-25 12:22:20.778071"], ["question_id", 11], ["updated_at", "2014-12-25 12:22:20.778071"]]
+  [1m[36m (269.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/answers/17
+Completed 302 Found in 274ms (ActiveRecord: 270.0ms)
+
+
+Started GET "/answers/17" for 127.0.0.1 at 2014-12-25 16:22:21 +0400
+Processing by AnswersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT  "answers".* FROM "answers"  WHERE "answers"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered answers/show.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:22:21 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:22:21 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:22:21 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:22:21 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:22:21 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:22:21 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:22:21 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:22:21 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:22:21 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:22:21 +0400
+
+
+Started GET "/answers" for 127.0.0.1 at 2014-12-25 16:22:25 +0400
+Processing by AnswersController#index as HTML
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered answers/index.html.erb within layouts/application (15.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 159ms (Views: 156.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/answers" for 127.0.0.1 at 2014-12-25 16:23:08 +0400
+Processing by AnswersController#index as HTML
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered answers/index.html.erb within layouts/application (11.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:23:08 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:23:08 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:23:08 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:08 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:23:08 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:08 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:08 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:08 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:08 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:08 +0400
+
+
+Started GET "/answers/new" for 127.0.0.1 at 2014-12-25 16:23:09 +0400
+Processing by AnswersController#new as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered answers/_form.html.erb (4.9ms)
+  Rendered answers/new.html.erb within layouts/application (6.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2014-12-25 16:23:16 +0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eciDRX7pG4uYqx325MAbT4L/EjqWyF8hZKNdvUOFRgw=", "answer"=>{"content"=>"Answ 3", "question_id"=>"11", "is_correct"=>"0"}, "commit"=>"Create Answer"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("content", "created_at", "question_id", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Answ 3"], ["created_at", "2014-12-25 12:23:16.997329"], ["question_id", 11], ["updated_at", "2014-12-25 12:23:16.997329"]]
+  [1m[36m (316.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/answers/18
+Completed 302 Found in 321ms (ActiveRecord: 316.8ms)
+
+
+Started GET "/answers/18" for 127.0.0.1 at 2014-12-25 16:23:17 +0400
+Processing by AnswersController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT  "answers".* FROM "answers"  WHERE "answers"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered answers/show.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+Completed 200 OK in 149ms (Views: 147.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/quiz.css?body=1" for 127.0.0.1 at 2014-12-25 16:23:17 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:17 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-25 16:23:17 +0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-12-25 16:23:17 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:17 +0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-25 16:23:17 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:17 +0400
+
+
+Started GET "/assets/quiz.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:17 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:17 +0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-25 16:23:17 +0400
+
+
+Started GET "/answers" for 127.0.0.1 at 2014-12-25 16:23:19 +0400
+Processing by AnswersController#index as HTML
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers"[0m
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions"  WHERE "questions"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered answers/index.html.erb within layouts/application (16.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+Completed 200 OK in 74ms (Views: 71.7ms | ActiveRecord: 1.0ms)
