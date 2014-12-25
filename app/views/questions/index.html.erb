@@ -1,9 +1,9 @@
-<h1>Listing questions</h1>
+<h1>Список вопросов</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Content</th>
+      <th>Вопрос</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,9 +12,9 @@
     <% @questions.each do |question| %>
       <tr>
         <td><%= question.content %></td>
-        <td><%= link_to 'Show', question %></td>
-        <td><%= link_to 'Edit', edit_question_path(question) %></td>
-        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Показать', question %></td>
+        <td><%= link_to 'Изменить', edit_question_path(question) %></td>
+        <td><%= link_to 'Удалить', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
