@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'quiz/signin'
+  post 'quiz/signin'
 
   get 'quiz/signin_form'
 
-  get 'quiz/signup'
+  post 'quiz/signup'
 
   get 'quiz/signup_form'
 

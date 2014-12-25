@@ -20,7 +20,7 @@
     <%= f.collection_select :question_id, Question.all, :id, :content %>
     </div><br>
   <div class = "field">
-    <%= f.label :is_correct %><br>
+    <%= f.label "Правильный" %>
     <%= f.check_box :is_correct %>
   </div><br>
   <div class="actions">
